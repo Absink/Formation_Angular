@@ -1,4 +1,5 @@
 <header class="fixed-top">
+  <app-icon-nav (click)="toggle()"></app-icon-nav>
   <ng-content select="app-header"></ng-content>
 </header>
 
@@ -16,7 +17,7 @@
   <div class="page">
 
     <div class="contents">
-      contenus
+      <ng-content select=".content"></ng-content>
     </div>
 
     <footer>

@@ -9,9 +9,10 @@ import { TextsModule } from './texts/texts.module';
 import { IconsModule } from './icons/icons.module';
 import { CoreModule } from './core/core.module';
 
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
