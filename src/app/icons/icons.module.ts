@@ -13,7 +13,8 @@ import { IconEditComponent } from './components/icon-edit/icon-edit.component';
     FontAwesomeModule
   ],
   exports: [
-    FontAwesomeModule
+    IconNavComponent,
+    IconEditComponent
   ]
 })
 export class IconsModule { }
