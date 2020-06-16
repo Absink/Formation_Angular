@@ -28,7 +28,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              {
+                "input": "./node_modules/bootstrap/dist/css/bootstrap.css"
+              }
             ],
             "scripts": []
           },
@@ -123,6 +126,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "formation"
+    }
+  },
+  "defaultProject": "formation",
+  "cli": {
+    "analytics": "25d9963b-9150-4d58-85af-a765c0e4db3c"
+  }
 }
