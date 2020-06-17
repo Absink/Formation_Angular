@@ -1,0 +1,15 @@
+<table class="table">
+  <thead>
+    <tr>
+        <th *ngFor="let h of headers">{{ h }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of collection">
+      <td>{{ c.name }}</td>
+      <td>{{ c.totalTTC() }}</td>
+      <td>{{ c.comment }}</td>
+      <td>{{ c.state }}</td>
+    </tr>
+  </tbody>
+</table>
