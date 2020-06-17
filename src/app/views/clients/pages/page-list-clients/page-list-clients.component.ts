@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { ClientsService } from '../../services/clients.service';
+import { Client } from 'src/app/shared/models/client.model';
 
 @Component({
   selector: 'app-page-list-clients',
@@ -8,25 +9,15 @@ import { Observable } from 'rxjs';
 })
 export class PageListClientsComponent implements OnInit {
 
-  constructor() { }
+  public collection: Client[];
+
+  constructor(private cs: ClientsService) { }
 
   ngOnInit(): void {
-    // 1. Creation Observable
-    const datas = new Observable(obs => {
-      obs.next('M2i');      // 'next' envoie une valeur;
-      obs.next('Airbus');
-      obs.complete();       // 'complete' signale la fin
-    });
-
-    // 2. Souscription
-    datas.subscribe({
-      next: value => console.log(value),
-      complete: () => console.log('End')
+    this.cs.collection.subscribe((datas) => {
+      this.collection = datas;
+      console.log(this.collection)
     })
-
-    // 3. Demo avec F12 !
-
-    // 4. Effacer le code
   }
 
 }
