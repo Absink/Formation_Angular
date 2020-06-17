@@ -5,14 +5,6 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let c of collection">
-      <td>{{ c.typePresta }}</td>
-      <td>{{ c.client }}</td>
-      <td>{{ c.nbJours }}</td>
-      <td>{{ c.tjmHT }}</td>
-      <td>{{ c | total: 'HT' | currency: 'EUR' }}</td>
-      <td>{{ c | total: 'TTC' | currency: 'EUR' }}</td>
-      <td>{{ c.state }}</td>
-    </tr>
+    <ng-content></ng-content>
   </tbody>
 </table>

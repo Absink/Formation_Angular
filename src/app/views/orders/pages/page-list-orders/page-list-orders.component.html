@@ -1,1 +1,11 @@
-<app-table-light *ngIf="collection" [collection]="collection" [headers]="headers"></app-table-light>
+<app-table-light *ngIf="collection" [headers]="headers">
+  <tr *ngFor="let c of collection">
+    <td>{{ c.typePresta }}</td>
+    <td>{{ c.client }}</td>
+    <td>{{ c.nbJours }}</td>
+    <td>{{ c.tjmHT }}</td>
+    <td>{{ c | total: 'HT' | currency: 'EUR' }}</td>
+    <td>{{ c | total: 'TTC' | currency: 'EUR' }}</td>
+    <td>{{ c.state }}</td>
+  </tr>
+</app-table-light>

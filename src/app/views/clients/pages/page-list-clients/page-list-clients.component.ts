@@ -17,7 +17,6 @@ export class PageListClientsComponent implements OnInit {
   ngOnInit(): void {
     this.cs.collection.subscribe((datas) => {
       this.collection = datas;
-      console.log(this.collection)
     })
     this.headers = ['Nom', 'Total TTC', 'Commentaire', 'Etat'];
   }

@@ -8,13 +8,11 @@ import { Order } from '../../models/order.model';
 })
 export class TableLightComponent implements OnInit {
 
-  @Input() collection: Order[]
   @Input() headers: string[];
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log('tes', this.collection)
   }
 
 }
