@@ -1,0 +1,21 @@
+@import 'themes';
+
+.table-light {
+  .state-cancel {
+    background: $color-error;
+  }
+  .state-option {
+    background: $color3;
+  }
+  .state-confirmed {
+    background: $color-success;
+  }
+
+  .nbJours-exces {
+    background: $color-error;
+  }
+  .nbJours-ok {
+    background: $color-success;
+  }
+}
+

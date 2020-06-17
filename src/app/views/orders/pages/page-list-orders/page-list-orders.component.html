@@ -6,7 +6,7 @@
     <td>{{ c.tjmHT }}</td>
     <td>{{ c | total: 'HT' | currency: 'EUR' }}</td>
     <td>{{ c | total: 'TTC' | currency: 'EUR' }}</td>
-    <td>
+    <td [appColorState] = "c.state">
       <select (change)="changeState(c, $event)">
         <option *ngFor="let s of states" [value]="s" [selected]="s === c.state">
           {{ s }}
