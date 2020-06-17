@@ -10,6 +10,7 @@ import { Client } from 'src/app/shared/models/client.model';
 export class PageListClientsComponent implements OnInit {
 
   public collection: Client[];
+  public headers: string[];
 
   constructor(private cs: ClientsService) { }
 
@@ -18,6 +19,6 @@ export class PageListClientsComponent implements OnInit {
       this.collection = datas;
       console.log(this.collection)
     })
+    this.headers = ['Nom', 'Total TTC', 'Commentaire', 'Etat'];
   }
-
 }

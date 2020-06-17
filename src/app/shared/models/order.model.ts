@@ -2,9 +2,9 @@ import { OrderI } from '../interfaces/order-i';
 import { StateOrder } from '../enums/state-order.enum';
 
 export class Order implements OrderI {
-  tjmHT: 500;
-  nbJours: 1;
-  tva: 20;
+  tjmHT = 500;
+  nbJours = 1;
+  tva = 20;
   state: StateOrder.OPTION;
   typePresta: string;
   client: string;

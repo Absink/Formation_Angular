@@ -10,6 +10,7 @@ import { Order } from 'src/app/shared/models/order.model';
 export class PageListOrdersComponent implements OnInit {
 
   public collection: Order[];
+  public headers: string[];
 
   constructor(private os: OrdersService) { }
 
@@ -18,7 +19,7 @@ export class PageListOrdersComponent implements OnInit {
       this.collection = datas;
       console.log(this.collection)
     })
-    // console.log(this.collection)
+    this.headers = ['Type', 'Client', 'Nb. Jours', 'TJM HT', 'Total HT', 'Total TTC', 'Etat'];
   }
 
 }
