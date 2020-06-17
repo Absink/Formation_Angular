@@ -10,8 +10,8 @@
       <td>{{ c.client }}</td>
       <td>{{ c.nbJours }}</td>
       <td>{{ c.tjmHT }}</td>
-      <td>{{ c.totalHT() | currency: 'EUR' }}</td>
-      <td>{{ c.totalTTC() }}</td>
+      <td>{{ c | total: 'HT' | currency: 'EUR' }}</td>
+      <td>{{ c | total: 'TTC' | currency: 'EUR' }}</td>
       <td>{{ c.state }}</td>
     </tr>
   </tbody>
