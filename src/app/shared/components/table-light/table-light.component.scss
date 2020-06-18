@@ -9,3 +9,18 @@
 .state-confirmed {
   background: $color-success;
 }
+
+app-template-a {
+  .table {
+    .state-option {
+      background: $color1;
+    }
+  }
+}
+app-template-b {
+  .table {
+    .state-option {
+      background: $color2;
+    }
+  }
+}
