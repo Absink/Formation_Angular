@@ -32,4 +32,9 @@ export class ClientsService {
   set collection(col: Observable<Client[]>) {
     this.pCollection = col;
   }
+
+  public add(client: Client): Observable<Client> {
+    return this.http.post<Client>(`${this.urlAPI}clients`, client);
+  }
+
 }
