@@ -7,6 +7,7 @@ import { TableDarkComponent } from './components/table-dark/table-dark.component
 import { BtnComponent } from './components/btn/btn.component';
 import { RouterModule } from '@angular/router';
 import { TableStripedComponent } from './components/table-striped/table-striped.component';
+import { TemplatesModule } from '../templates/templates.module';
 
 
 
@@ -14,14 +15,16 @@ import { TableStripedComponent } from './components/table-striped/table-striped.
   declarations: [TableLightComponent, TotalPipe, ColorStateDirective, TableDarkComponent, BtnComponent, TableStripedComponent],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    TemplatesModule
   ], exports: [
     TableLightComponent,
     TableDarkComponent,
     TableStripedComponent,
     TotalPipe,
     ColorStateDirective,
-    BtnComponent
+    BtnComponent,
+    TemplatesModule
   ]
 })
 export class SharedModule { }
