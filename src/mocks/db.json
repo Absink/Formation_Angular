@@ -57,6 +57,14 @@
       "ca": 120000,
       "comment": "Un comment pour client modis",
       "id": 2
+    },
+    {
+      "state": "Inactive",
+      "tva": 20,
+      "name": "Olivier",
+      "ca": 8000,
+      "comment": "Ancien client",
+      "id": 3
     }
   ]
 }

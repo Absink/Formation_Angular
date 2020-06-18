@@ -1,12 +1,14 @@
-<app-table-striped *ngIf="collection" [headers]="headers">
-  <tr *ngFor="let c of collection">
-    <td>{{ c.name }}</td>
-    <td>{{ c.totalTTC() }}</td>
-    <td>{{ c.comment }}</td>
-    <td>{{ c.state }}</td>
-  </tr>
+<app-template-c title="Clients" subtitle="List of clients">
+  <app-table-striped *ngIf="collection" [headers]="headers">
+    <tr *ngFor="let c of collection">
+      <td>{{ c.name }}</td>
+      <td>{{ c.totalTTC() }}</td>
+      <td>{{ c.comment }}</td>
+      <td>{{ c.state }}</td>
+    </tr>
 
-  <app-btn [label]="btnHref.label" [href]="btnHref.href"></app-btn>
-  <app-btn [label]="btnRoute.label" [route]="btnRoute.route"></app-btn>
+    <app-btn [label]="btnHref.label" [href]="btnHref.href"></app-btn>
+    <app-btn [label]="btnRoute.label" [route]="btnRoute.route"></app-btn>
 
-</app-table-striped>
+  </app-table-striped>
+</app-template-c>

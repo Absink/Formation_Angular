@@ -10,6 +10,7 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 export class TextComponent implements OnInit {
 
   @Input() page: boolean
+  @Input() header: boolean
 
   constructor() { }
 

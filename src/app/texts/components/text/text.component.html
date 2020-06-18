@@ -1,3 +1,6 @@
-<div [ngClass]="{'pages': page}">
+<div [ngClass]="{
+  'pages': page,
+  'headers': header
+}">
   <ng-content></ng-content>
 </div>
