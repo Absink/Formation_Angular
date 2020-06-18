@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ClientsService } from '../../services/clients.service';
 import { Client } from 'src/app/shared/models/client.model';
+import { BtnI } from 'src/app/shared/interfaces/btn-i';
 
 @Component({
   selector: 'app-page-list-clients',
@@ -11,6 +12,8 @@ export class PageListClientsComponent implements OnInit {
 
   public collection: Client[];
   public headers: string[];
+  public btnRoute: BtnI;
+  public btnHref: BtnI;
 
   constructor(private cs: ClientsService) { }
 
@@ -19,5 +22,7 @@ export class PageListClientsComponent implements OnInit {
       this.collection = datas;
     })
     this.headers = ['Nom', 'Total TTC', 'Commentaire', 'Etat'];
+    this.btnRoute = { label: 'Add a client', route: 'add' };
+    this.btnHref = { label: 'Go to Angular', href: 'https://angular.io/' };
   }
 }
