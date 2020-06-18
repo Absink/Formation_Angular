@@ -36,6 +36,11 @@ export class OrdersService {
     this.pCollection = col;
   }
 
+  // Add
+  public add(order: Order): Observable<Order> {
+    return this.http.post<Order>(`${this.urlAPI}orders`, order);
+  }
+
   // Update
   public update(order: Order): Observable<Order> {
     return this.http.put<Order>(`${this.urlAPI}orders/${order.id}`, order);
