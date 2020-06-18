@@ -8,6 +8,7 @@ import { BtnComponent } from './components/btn/btn.component';
 import { RouterModule } from '@angular/router';
 import { TableStripedComponent } from './components/table-striped/table-striped.component';
 import { TemplatesModule } from '../templates/templates.module';
+import { TextsModule } from '../texts/texts.module';
 
 
 
@@ -16,7 +17,8 @@ import { TemplatesModule } from '../templates/templates.module';
   imports: [
     CommonModule,
     RouterModule,
-    TemplatesModule
+    TemplatesModule,
+    TextsModule
   ], exports: [
     TableLightComponent,
     TableDarkComponent,
@@ -24,7 +26,8 @@ import { TemplatesModule } from '../templates/templates.module';
     TotalPipe,
     ColorStateDirective,
     BtnComponent,
-    TemplatesModule
+    TemplatesModule,
+    TextsModule
   ]
 })
 export class SharedModule { }

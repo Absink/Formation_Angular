@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
+import { TextsModule } from '../texts/texts.module';
 
 
 
@@ -12,6 +13,7 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     RouterModule,
+    TextsModule
   ],exports: [
     HeaderComponent, NavComponent, FooterComponent
   ]
