@@ -8,9 +8,10 @@
     </div>
 
     <div class="form-group">
-      <label for="client">ca</label>
+      <label for="ca">ca</label>
       <input formControlName="ca" type="number" class="form-control" id="ca">
     </div>
+    <div *ngIf="form.get('ca').errors?.required && form.get('ca').touched" class= "alert alert-danger">Champs vide</div>
 
     <div class="form-group">
       <label for="tva">tva</label>
@@ -29,7 +30,7 @@
       <textarea formControlName="comment" class="form-control" id="comment"></textarea>
     </div>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Submit</button>
 
 
   </form>
