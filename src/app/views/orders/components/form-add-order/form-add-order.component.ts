@@ -1,6 +1,6 @@
-import { Component, EventEmitter, OnInit, Input, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Input, Output,  } from '@angular/core';
 import { Order } from 'src/app/shared/models/order.model';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { StateOrder } from 'src/app/shared/enums/state-order.enum';
 
 @Component({
@@ -26,14 +26,14 @@ export class FormAddOrderComponent implements OnInit {
       state: [this.order.state],
       typePresta: [
         this.order.typePresta,
-        //Validators.required
+        Validators.required
       ],
       client: [
         this.order.client,
-        /*Validators.compose([
+        Validators.compose([
           Validators.required,
           Validators.minLength(2)
-        ])*/
+        ])
       ],
       comment: [this.order.comment],
       id: [this.order.id],

@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { StateOrder } from 'src/app/shared/enums/state-order.enum';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Client } from 'src/app/shared/models/client.model';
 import { StateClient } from 'src/app/shared/enums/state-client.enum';
