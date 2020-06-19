@@ -4,6 +4,7 @@ import { Order } from 'src/app/shared/models/order.model';
 import { StateOrder } from 'src/app/shared/enums/state-order.enum';
 import { BtnI } from 'src/app/shared/interfaces/btn-i';
 import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-page-list-orders',
@@ -12,7 +13,6 @@ import { Observable } from 'rxjs';
 })
 export class PageListOrdersComponent implements OnInit {
 
-  //public collection: Order[];
   public collection$: Observable<Order[]>
   public headers: string[];
   public states = Object.values(StateOrder)
@@ -20,14 +20,10 @@ export class PageListOrdersComponent implements OnInit {
   public btnHref: BtnI;
   public btnAction: BtnI;
 
-  constructor(private os: OrdersService) { }
+  constructor(private os: OrdersService, public route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.collection$ = this.os.collection;
-    /*this.os.collection.subscribe((datas) => {
-      this.collection = datas;
-      console.log(this.collection)
-    })*/
     this.headers = ['Type', 'Client', 'Nb. Jours', 'TJM HT', 'Total HT', 'Total TTC', 'Etat'];
     this.btnRoute = { label: 'Add an order', route: 'add' };
     this.btnHref = { label: 'Go to Google', href: 'http://www.google.fr' };

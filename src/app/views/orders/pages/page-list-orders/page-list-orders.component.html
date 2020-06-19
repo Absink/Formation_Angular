@@ -1,4 +1,4 @@
-<app-template-b title="Orders" subtitle="All Orders">
+<app-template-b *ngIf="route.data | async as datas" [title]=datas.title [subtitle]=datas.subtitle>
   <app-table-light *ngIf="collection$ | async as collection" [headers]="headers">
     <tr *ngFor="let c of collection">
       <td>{{ c.typePresta }}</td>
@@ -15,14 +15,6 @@
         </select>
       </td>
     </tr>
-
-    <!--
-    <app-text [page]="true">
-      <h1>Order</h1>
-      <h2>All Orders</h2>
-      <p>Orders list</p>
-    </app-text>
-    -->
 
     <app-btn [label]="btnRoute.label" [route]="btnRoute.route"></app-btn>
     <app-btn [label]="btnHref.label" [href]="btnHref.href"></app-btn>
